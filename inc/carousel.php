@@ -6,109 +6,38 @@
 			</div>
 			<div class="col-md-8 col-md-offset-2">
 				<div class="row">
-					
+
+					<?php 
+
+						// SEÇÃO DE CONSULTA
+
+						include("controller/config.inc.php");
+						setlocale(LC_MONETARY,"pt_BR"); 
+
+						$consulta = $mysqli_conn->query("SELECT * FROM produtos_lista WHERE produto_destaque = '1'");
+						$lista_produtos = "";
+
+						// /SEÇÃO DE CONSULTA
+					?>					
 					
 					<div class="owl-carousel owl-theme carousel-list col-md-12" style="position: relative;">
-						<article class="item">
-							<a href="produto.php?categoria=brincos&produto=brincos-001" title="brincos-001">
-								<figure class="produto-01">
-									<img class="img-responsive" src="img/uploads/produtos/brincos/240x240/brincos-001.jpg" alt="Brincos">
-								</figure>
-								<div class="produto-info">
-									<h2><strong>BRINCO LOREM IPSUM DOLOR SIT</strong></h2>
-									<h3>R$ 00,00</h3>
-								</div>
-							</a>
-						</article>
-						<article class="item">
-							<a href="produto.php?categoria=brincos&produto=brincos-002" title="brincos-002">
-								<figure class="produto-01">
-									<img class="img-responsive" src="img/uploads/produtos/brincos/240x240/brincos-002.jpg" alt="Brincos">
-								</figure>
-								<div class="produto-info">
-									<h2><strong>BRINCO LOREM IPSUM DOLOR SIT</strong></h2>
-									<h3>R$ 00,00</h3>
-								</div>
-							</a>
-						</article>
-						<article class="item">
-							<a href="produto.php?categoria=brincos&produto=brincos-003" title="brincos-003">
-								<figure class="produto-01">
-									<img class="img-responsive" src="img/uploads/produtos/brincos/240x240/brincos-003.jpg" alt="Brincos">
-								</figure>
-								<div class="produto-info">
-									<h2><strong>BRINCO LOREM IPSUM DOLOR SIT</strong></h2>
-									<h3>R$ 00,00</h3>
-								</div>
-							</a>
-						</article>
-						<article class="item">
-							<a href="produto.php?categoria=brincos&produto=brincos-004" title="brincos-004">
-								<figure class="produto-01">
-									<img class="img-responsive" src="img/uploads/produtos/brincos/240x240/brincos-004.jpg" alt="Brincos">
-								</figure>
-								<div class="produto-info">
-									<h2><strong>BRINCO LOREM IPSUM DOLOR SIT</strong></h2>
-									<h3>R$ 00,00</h3>
-								</div>
-							</a>
-						</article>
-						<article class="item">
-							<a href="produto.php?categoria=brincos&produto=brincos-005" title="brincos-005">
-								<figure class="produto-01">
-									<img class="img-responsive" src="img/uploads/produtos/brincos/240x240/brincos-005.jpg" alt="Brincos">
-								</figure>
-								<div class="produto-info">
-									<h2><strong>BRINCO LOREM IPSUM DOLOR SIT</strong></h2>
-									<h3>R$ 00,00</h3>
-								</div>
-							</a>
-						</article>
-						<article class="item">
-							<a href="produto.php?categoria=brincos&produto=brincos-006" title="brincos-006">
-								<figure class="produto-01">
-									<img class="img-responsive" src="img/uploads/produtos/brincos/240x240/brincos-006.jpg" alt="Brincos">
-								</figure>
-								<div class="produto-info">
-									<h2><strong>BRINCO LOREM IPSUM DOLOR SIT</strong></h2>
-									<h3>R$ 00,00</h3>
-								</div>
-							</a>
-						</article>
-						<article class="item">
-							<a href="produto.php?categoria=brincos&produto=brincos-007" title="brincos-007">
-								<figure class="produto-01">
-									<img class="img-responsive" src="img/uploads/produtos/brincos/240x240/brincos-007.jpg" alt="Brincos">
-								</figure>
-								<div class="produto-info">
-									<h2><strong>BRINCO LOREM IPSUM DOLOR SIT</strong></h2>
-									<h3>R$ 00,00</h3>
-								</div>
-							</a>
-						</article>
-						<article class="item">
-							<a href="produto.php" title="Produto">
-							<a href="produto.php?categoria=brincos&produto=brincos-008" title="brincos-008">
-								<figure class="produto-01">
-									<img class="img-responsive" src="img/uploads/produtos/brincos/240x240/brincos-008.jpg" alt="Brincos">
-								</figure>
-								<div class="produto-info">
-									<h2><strong>BRINCO LOREM IPSUM DOLOR SIT</strong></h2>
-									<h3>R$ 00,00</h3>
-								</div>
-							</a>
-						</article>
-						<article class="item">
-							<a href="produto.php?categoria=brincos&produto=brincos-009" title="brincos-009">
-								<figure class="produto-01">
-									<img class="img-responsive" src="img/uploads/produtos/brincos/240x240/brincos-009.jpg" alt="Brincos">
-								</figure>
-								<div class="produto-info">
-									<h2><strong>BRINCO LOREM IPSUM DOLOR SIT</strong></h2>
-									<h3>R$ 00,00</h3>
-								</div>
-							</a>
-						</article>
+							<?php while($row = $consulta->fetch_assoc()) { 
+								$lista_produtos .= <<<EOT
+									<article class="item">
+										<a href="produto.php?categoria={$row['produto_categoria']}&produto={$row['produto_titulo']}" title="{$row['produto_titulo']}">
+											<figure class="{$row['produto_titulo']}">
+												<img class="img-responsive lazy" data-original="img/uploads/produtos/{$row['produto_categoria']}/240x240/{$row['produto_imagem']}" alt="{$row['produto_titulo']}" title="{$row['produto_titulo']}">
+											</figure>
+											<div class="produto-info">
+												<h2><strong>{$row['produto_descricao']}</strong></h2>
+												<h3>R$ {$row['produto_preco']}</h3>
+											</div>
+										</a>
+									</article>
+EOT;
+							};
+						 	echo $lista_produtos; ?>
+
 					</div>
 				</div>
 			</div>

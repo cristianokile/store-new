@@ -17,6 +17,11 @@
 
 		<!-- Scripts Secundários -->
 		<script src="js/scripts.js"></script>
+		<script type="text/javascript">
+	  		$(function() {
+	     		$("img.lazy").lazyload();
+	  		});
+  		</script>
 		
 	</body>
 </html>
