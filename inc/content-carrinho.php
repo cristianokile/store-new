@@ -11,8 +11,15 @@
 			<dv class="col-md-12 col-sm-12 col-xs-12">
 				<div class="row">
 					<?php 
+
+						// SEÇÃO DE CONSULTA
+
 						include("controller/config.inc.php");
 						setlocale(LC_MONETARY,"pt_BR"); 
+
+						$consulta = $mysqli_conn->query("SELECT id, produto_codigo, produto_titulo, produto_descricao, produto_imagem, produto_imagem_hd, produto_categoria, produto_estoque, produto_preco, produto_destaque FROM produtos_lista");
+
+						// /SEÇÃO DE CONSULTA
 					?>
 					<div class="col-md-12">
 						<h2 class="heading-title-underline text-center-xs">CARRINHO</h2>

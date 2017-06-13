@@ -10,6 +10,19 @@
 </div>
 <div class="loja-produtos">
 	<div class="container">
+
+		<?php 
+
+			// SEÇÃO DE CONSULTA
+
+			include("controller/config.inc.php");
+			setlocale(LC_MONETARY,"pt_BR"); 
+
+			$consulta = $mysqli_conn->query("SELECT id, produto_codigo, produto_titulo, produto_descricao, produto_imagem, produto_imagem_hd, produto_categoria, produto_estoque, produto_preco, produto_destaque FROM produtos_lista");
+
+			// /SEÇÃO DE CONSULTA
+		?>
+
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 text-center">
 				<h2 class="heading-title"><?php echo $categoria; ?></h2>
