@@ -1,0 +1,27 @@
+/*
+Theme Name: Juchimello Template
+Author: Chiapa Design
+Author URI: http://chiapadesign.com.br
+Description: Layout desenvolvido por Chiapa Design & pP
+Version: 1.0
+*/
+
+@charset "UTF-8";
+
+/* Bootstrap */
+@import url("css/bootstrap/bootstrap-theme.min.css");
+@import url("css/bootstrap/bootstrap.min.css");
+
+/* Estilos Principais */
+@import url("css/tema-estilos/main.css");
+
+/* Fontes */
+@import url("css/tema-estilos/fonts.css");
+
+/* Fancybox */
+@import url("css/fancy-css/jquery.fancybox.css");
+
+/* Carousel */
+@import url("js/owl-carousel/dist/assets/owl.carousel.min.css");
+@import url("js/owl-carousel/dist/assets/owl.theme.default.min.css");
+

@@ -1,0 +1,286 @@
+/* GOTHAN BOLD */
+
+@font-face {
+    font-family:'Gotham Medium';
+    src: url('../../fonts/gotham/Gotham-Medium.eot');
+    src: url('../../fonts/gotham/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/gotham/Gotham-Medium.woff2') format('woff2'),
+        url('../../fonts/gotham/Gotham-Medium.woff') format('woff'),
+        url('../../fonts/gotham/Gotham-Medium.svg#Gotham-Medium') format('svg');
+    font-weight: 350;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+@font-face {
+    font-family:'Gotham Bold';
+    src: url('../../fonts/gotham/Gotham-Bold.eot');
+	src: url('../../fonts/gotham/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/gotham/Gotham-Bold.woff2') format('woff2'),
+		url('../../fonts/gotham/Gotham-Bold.woff') format('woff'),
+		url('../../fonts/gotham/Gotham-Bold.svg#Gotham Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+@font-face {
+    font-family:'GothamBook';
+    src: url('../../fonts/gotham/GothamBook.eot');
+    src: url('../../fonts/gotham/GothamBook.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/gotham/GothamBook.woff2') format('woff2'),
+        url('../../fonts/gotham/GothamBook.woff') format('woff'),
+        url('../../fonts/gotham/GothamBook.svg#GothamBook') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+/* JAAPOKKI */
+
+@font-face {
+    font-family:'Jaapokki';
+    src: url('../../fonts/jaapokki/Jaapokki-Regular.eot');
+    src: url('../../fonts/jaapokki/Jaapokki-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/jaapokki/Jaapokki-Regular.woff2') format('woff2'),
+        url('../../fonts/jaapokki/Jaapokki-Regular.woff') format('woff'),
+        url('../../fonts/jaapokki/Jaapokki-Regular.svg#Jaapokki-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+/*  MONTSERRAT  */
+@font-face {
+    font-family:'Montserrat ExtraLight';
+    src: url('../../fonts/montserrat/Montserrat-ExtraLight-Italic.eot');
+    src: url('../../fonts/montserrat/Montserrat-ExtraLight-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-ExtraLight-Italic.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-ExtraLight-Italic.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-ExtraLight-Italic.svg#Montserrat ExtraLight Italic') format('svg');
+    font-weight: 275;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat ExtraLight';
+    src: url('../../fonts/montserrat/Montserrat-ExtraLight.eot');
+    src: url('../../fonts/montserrat/Montserrat-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-ExtraLight.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-ExtraLight.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-ExtraLight.svg#Montserrat ExtraLight') format('svg');
+    font-weight: 275;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat Light';
+    src: url('../../fonts/montserrat/Montserrat-Light.eot');
+    src: url('../../fonts/montserrat/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-Light.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-Light.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-Light.svg#Montserrat Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat Light';
+    src: url('../../fonts/montserrat/Montserrat-Light-Italic.eot');
+    src: url('../../fonts/montserrat/Montserrat-Light-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-Light-Italic.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-Light-Italic.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-Light-Italic.svg#Montserrat Light Italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat Thin';
+    src: url('../../fonts/montserrat/Montserrat-Thin.eot');
+    src: url('../../fonts/montserrat/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-Thin.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-Thin.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-Thin.svg#Montserrat Thin') format('svg');
+    font-weight: 250;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2212;
+}
+@font-face {
+    font-family:'Montserrat Thin';
+    src: url('../../fonts/montserrat/Montserrat-Thin-Italic.eot');
+    src: url('../../fonts/montserrat/Montserrat-Thin-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-Thin-Italic.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-Thin-Italic.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-Thin-Italic.svg#Montserrat Thin Italic') format('svg');
+    font-weight: 250;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2212;
+}
+@font-face {
+    font-family:'Montserrat';
+    src: url('../../fonts/montserrat/Montserrat-Regular.eot');
+    src: url('../../fonts/montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-Regular.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-Regular.svg#Montserrat Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat';
+    src: url('../../fonts/montserrat/Montserrat-Italic.eot');
+    src: url('../../fonts/montserrat/Montserrat-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-Italic.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-Italic.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-Italic.svg#Montserrat Italic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat Medium';
+    src: url('../../fonts/montserrat/Montserrat-Medium.eot');
+    src: url('../../fonts/montserrat/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-Medium.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-Medium.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-Medium.svg#Montserrat Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat Medium';
+    src: url('../../fonts/montserrat/Montserrat-Medium-Italic.eot');
+    src: url('../../fonts/montserrat/Montserrat-Medium-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-Medium-Italic.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-Medium-Italic.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-Medium-Italic.svg#Montserrat Medium Italic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat SemiBold';
+    src: url('../../fonts/montserrat/Montserrat-SemiBold.eot');
+    src: url('../../fonts/montserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-SemiBold.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-SemiBold.svg#Montserrat SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat SemiBold';
+    src: url('../../fonts/montserrat/Montserrat-SemiBold-Italic.eot');
+    src: url('../../fonts/montserrat/Montserrat-SemiBold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-SemiBold-Italic.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-SemiBold-Italic.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-SemiBold-Italic.svg#Montserrat SemiBold Italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat ExtraBold';
+    src: url('../../fonts/montserrat/Montserrat-ExtraBold.eot');
+    src: url('../../fonts/montserrat/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-ExtraBold.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-ExtraBold.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-ExtraBold.svg#Montserrat ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat ExtraBold';
+    src: url('../../fonts/montserrat/Montserrat-ExtraBold-Italic.eot');
+    src: url('../../fonts/montserrat/Montserrat-ExtraBold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-ExtraBold-Italic.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-ExtraBold-Italic.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-ExtraBold-Italic.svg#Montserrat ExtraBold Italic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat Black';
+    src: url('../../fonts/montserrat/Montserrat-Black.eot');
+    src: url('../../fonts/montserrat/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-Black.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-Black.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-Black.svg#Montserrat Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+@font-face {
+    font-family:'Montserrat Black';
+    src: url('../../fonts/montserrat/Montserrat-Black-Italic.eot');
+    src: url('../../fonts/montserrat/Montserrat-Black-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/montserrat/Montserrat-Black-Italic.woff2') format('woff2'),
+        url('../../fonts/montserrat/Montserrat-Black-Italic.woff') format('woff'),
+        url('../../fonts/montserrat/Montserrat-Black-Italic.svg#Montserrat Black Italic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+}
+
+/* MYRIAD */
+
+@font-face {
+    font-family:'Myriad Pro Regular';
+    src: url('../../fonts/myriadpro/MyriadPro-Regular.eot');
+    src: url('../../fonts/myriadpro/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/myriadpro/MyriadPro-Regular.woff2') format('woff2'),
+        url('../../fonts/myriadpro/MyriadPro-Regular.woff') format('woff'),
+        url('../../fonts/myriadpro/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+@font-face {
+    font-family:'Myriad Pro Black';
+    src: url('../../fonts/myriadpro/MyriadPro-Black.eot');
+    src: url('../../fonts/myriadpro/MyriadPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/myriadpro/MyriadPro-Black.woff2') format('woff2'),
+        url('../../fonts/myriadpro/MyriadPro-Black.woff') format('woff'),
+        url('../../fonts/myriadpro/MyriadPro-Black.svg#MyriadPro-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+@font-face {
+    font-family:'Myriad Pro Bold';
+    src: url('../../fonts/myriadpro/MyriadPro-Bold.eot');
+    src: url('../../fonts/myriadpro/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/myriadpro/MyriadPro-Bold.woff2') format('woff2'),
+        url('../../fonts/myriadpro/MyriadPro-Bold.woff') format('woff'),
+        url('../../fonts/myriadpro/MyriadPro-Bold.svg#MyriadPro-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
