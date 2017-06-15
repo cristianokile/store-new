@@ -1,13 +1,13 @@
 <?php
 
-// $db_username        = 'rbc_store'; //MySql database username
-// $db_password        = 'BJ@cao8**'; //MySql dataabse password
-// $db_name            = 'rbc_store'; //MySql database name
-// $db_host            = 'rbc_store.mysql.dbaas.com.br'; //MySql hostname or IP
+// $db_username        = 'root'; //MySql database username
+// $db_password        = ''; //MySql dataabse password
+// $db_name            = 'juchimello'; //MySql database name
+// $db_host            = 'localhost'; //MySql hostname or IP
 
-$db_username        = 'root'; //MySql database username
-$db_password        = ''; //MySql dataabse password
-$db_name            = 'juchimello'; //MySql database name
+$db_username        = 'chiapadesign'; //MySql database username
+$db_password        = 'queroveragora10'; //MySql dataabse password
+$db_name            = 'chiapadesign'; //MySql database name
 $db_host            = 'localhost'; //MySql hostname or IP
 
 $currency			= '&#82;&#36;'; //currency symbol

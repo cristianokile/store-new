@@ -15,40 +15,40 @@
 		$statement->execute();
 		$statement->bind_result($produto_titulo, $produto_preco);
 
-		while($statement->fetch()){ 	
-			$new_product["produto_titulo"] = $produto_titulo; 
+		while($statement->fetch()){ 
+			$new_product["produto_nome"] = $produto_titulo; 
 			$new_product["produto_preco"] = $produto_preco;  
-			if(isset($_SESSION["produtos"])){ 
-				if(isset($_SESSION["produtos"][$new_product['produto_codigo']])) 
+			if(isset($_SESSION["products"])){ 
+				if(isset($_SESSION["products"][$new_product['produto_codigo']])) 
 				{
-					unset($_SESSION["produtos"][$new_product['produto_codigo']]); 
+					unset($_SESSION["products"][$new_product['produto_codigo']]); 
 				}			
 			}
-			$_SESSION["produtos"][$new_product['produto_codigo']] = $new_product;	
+			$_SESSION["products"][$new_product['produto_codigo']] = $new_product;	
 		}
-	 	$total_items = count($_SESSION["produtos"]); 
+	 	$total_items = count($_SESSION["products"]); 
 		die(json_encode(array('items'=>$total_items))); 
 	}
 
-	################## list produtos in cart ###################
+	################## list products in cart ###################
 	
 	if(isset($_POST["load_cart"]) && $_POST["load_cart"]==1){
-		if(isset($_SESSION["produtos"]) && count($_SESSION["produtos"])>0){ //if we have session variable
+		if(isset($_SESSION["products"]) && count($_SESSION["products"])>0){ //if we have session variable
 			$cart_box = '<ul class="cart-products-loaded">
 			';
 			$total = 0;
-			foreach($_SESSION["produtos"] as $produto){ //loop though items and prepare html content
+			foreach($_SESSION["products"] as $product){ //loop though items and prepare html content
 				
 				//set variables to use them in HTML content below
-				$produto_id 		= $produto["id"];
-				$produto_titulo 	= $produto["produto_titulo"];
-				$produto_codigo 	= $produto["produto_codigo"];
-				$produto_categoria 	= $produto["produto_categoria"];
-				$produto_imagem 	+ $produto["product_imagem"];
-				$produto_imagem_hd	= $produto["product_imagem_hd"];
-				$produto_preco 		= $produto["produto_preco"];
-				$produto_estoque	= $produto["product_estoque"];
-				$produto_quantidade	= $produto["produto_quantidade"];
+				$produto_id			= $product["id"];
+				$produto_codigo 	= $product["produto_codigo"];
+				$produto_titulo 	= $product["produto_titulo"];
+				$produto_desc 		= $product["produto_descricao"];
+				$produto_imagem 	= $product["produto_imagem"];
+				$produto_imagem_hd	= $product["produto_imagem_hd"];
+				$produto_cat 		= $product["produto_categoria"];
+				$produto_preco 		= $product["produto_preco"];
+				$produto_qtde		= $product["produto_qtde"];
 				
 				$cart_box .=  
 				"<li class='lista-body'>
@@ -56,8 +56,17 @@
 						<div class='col-md-2 lista-foto text-center'>
 							<div class='out center-block'>
 								<div class='in'>
-									<a href='produto.php?id=" . $produto_id . "'>
-										<img class='img-responsive center-block' src='" . $produto_image . "' alt='" . $produto_titulo . "' title='" . $produto_titulo . "'>
+									<a href='produto.php?cod=" . $produto_codigo . "'>
+										<img class='img-responsive center-block' src='" . $produto_imagem . "' alt='" . $produto_titulo . "' title='" . $produto_titulo . "'>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class='col-md-6 lista-descricao'>
+							<div class='out'>
+								<div class='in'>
+									<a href='produto.php?cod=" . $produto_codigo . "'>
+										<p><strong>" . $produto_titulo . "</strong></p>
 									</a>
 								</div>
 							</div>
@@ -82,11 +91,11 @@
 				$total = $produto_qtde;
 			}
 			$cart_box .= "</ul>";
-			$cart_box .= '<div class="cart-produtos-total"><u><a class="btn btn-default" href="carrinho.php" title="Revisar o Carrinho e Solicitar orçamento">Solicitar orçamento</a></u></div>';
+			$cart_box .= '<div class="cart-products-total"><u><a class="btn btn-default" href="carrinho.php" title="Revisar o Carrinho e Realizar a Compra">Comprar!</a></u></div>';
 			die($cart_box); //exit and output content
 		}else{
 			die("
-				<ul class='cart-produtos-loaded'>
+				<ul class='cart-products-loaded'>
 					<li class='lista-body'>
 						<br><p class='text-center'>Você não possui produtos adicionados</p><br>
 					</li>
@@ -95,13 +104,13 @@
 	}
 
 	################# remove item from shopping cart ################
-	if(isset($_GET["remove_code"]) && isset($_SESSION["produtos"]))
+	if(isset($_GET["remove_code"]) && isset($_SESSION["products"]))
 	{
 		$produto_codigo   = filter_var($_GET["remove_code"], FILTER_SANITIZE_STRING); //get the product code to remove
-		if(isset($_SESSION["produtos"][$produto_codigo]))
+		if(isset($_SESSION["products"][$produto_codigo]))
 		{
-			unset($_SESSION["produtos"][$produto_codigo]);
+			unset($_SESSION["products"][$produto_codigo]);
 		}
-	 	$total_items = count($_SESSION["produtos"]);
+	 	$total_items = count($_SESSION["products"]);
 		die(json_encode(array('items'=>$total_items)));
 	}

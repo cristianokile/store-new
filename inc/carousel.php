@@ -24,12 +24,12 @@
 							<?php while($row = $consulta->fetch_assoc()) { 
 								$lista_produtos .= <<<EOT
 									<article class="item">
-										<a href="produto.php?categoria={$row['produto_categoria']}&produto={$row['produto_titulo']}" title="{$row['produto_titulo']}">
+										<a href="produto.php?categoria={$row['produto_categoria']}&produto={$row['produto_titulo']}&cod={$row['produto_codigo']}" title="{$row['produto_titulo']}">
 											<figure class="{$row['produto_titulo']}">
-												<img class="img-responsive lazy" data-original="img/uploads/produtos/{$row['produto_categoria']}/240x240/{$row['produto_imagem']}" alt="{$row['produto_titulo']}" title="{$row['produto_titulo']}">
+												<img src="img/identidade/loading.gif" class="img-responsive lazy" data-original="img/uploads/produtos/{$row['produto_categoria']}/240x240/{$row['produto_imagem']}" alt="{$row['produto_titulo']}" title="{$row['produto_titulo']}">
 											</figure>
 											<div class="produto-info">
-												<h2><strong>{$row['produto_descricao']}</strong></h2>
+												<h2><strong>{$row['produto_titulo']}</strong></h2>
 												<h3>R$ {$row['produto_preco']}</h3>
 											</div>
 										</a>
@@ -48,6 +48,7 @@ EOT;
 	$(document).ready(function() {
 		var owl = $('.owl-carousel');
 		owl.owlCarousel({
+			navigation : true,
 			loop: true,
 			autoplay: true,
 			autoplayTimeout: 4000,

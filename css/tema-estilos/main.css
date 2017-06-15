@@ -1069,7 +1069,6 @@ input:focus ~ label, input:valid ~ label{
     to { width:0; background:transparent; }
 }
 
-
 /* HOOKS */
 
 .row.no-gutters {

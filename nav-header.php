@@ -79,68 +79,35 @@
 					<li><a href="contato.php">CONTATO</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
-			<div class="carrinho-icon">
-				<a href="#" class="cart-box" id="cart-info" title="View Cart">2 <span class="hidden-xs">ITENS</span></a>
-				<div class="shopping-cart-box" style="display: none;">
-					<a href="#" class="close-shopping-cart-box">Fechar</a>
-					<h3>Orçamento</h3>
-					<div id="shopping-cart-results">
-						<ul class="cart-products-loaded">
-							<li class="lista-body">
-								<div class="row">
-									<div class="col-md-2 lista-foto text-center">
-										<div class="out center-block">
-											<div class="in">
-												<a href="produto.php?id=315">
-													<img class="img-responsive center-block" src="http://rbcglobalbusiness.com/img/uploads/catalogo/vaso-vidro/VasoVidro-240078-Thumb.jpg" alt="Vaso De Vidro" title="Vaso De Vidro">
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6 lista-descricao">
-										<div class="out">
-											<div class="in">
-												<a href="produto.php?id=315" title="Vaso" de="" vidro="">
-													<p><strong>Vaso De Vidro</strong></p>
-												</a>
-												<p><strong>Tamanho: <br></strong> 15x30cm</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 lista-Itens">
-										<div class="out center-block">
-											<div class="in text-center">
-												<p><strong>Qtde:</strong><br>1</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-2 acao">
-										<div class="out center-block">
-											<div class="in">
-												<a class="btn btn-lg remove-item" href="#" data-code="240078"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<div class="cart-products-total">
-							<u>
-								<a class="btn btn-default" href="carrinho.php" title="Revisar o Carrinho e Solicitar orçamento">Solicitar orçamento</a>
-							</u>
-						</div>
-					</div>
-				</div>
-			</div>
+			<?php require('inc/nav-carrinho.php') ?>
 		</div><!-- /.container-fluid -->
 	</div>
 	<!-- NAVBAR FULLWIDTH -->
 	<nav class="nav-fullwidth hidden-xs" style="display: none;">
 		<ul>
-			<li><a href="catalogo-categoria-brincos.php" title="BRINCOS">BRINCOS</a></li>
-			<li><a href="catalogo-categoria-colares.php" title="COLARES">COLARES</a></li>
-			<li><a href="catalogo-categoria-pulseiras.php" title="PULSEIRAS">PULSEIRAS</a></li>
+			<li><a href="categoria.php?categoria=brincos" title="BRINCOS">BRINCOS</a></li>
+			<li><a href="categoria.php?categoria=colares" title="COLARES">COLARES</a></li>
+			<li><a href="categoria.php?categoria=pulseiras" title="PULSEIRAS">PULSEIRAS</a></li>
 		</ul>
 	</nav>
 </nav>
+
+<!-- SCRIPT DROPDOWN MENU -->
+<script>
+	$(document).ready(function() {
+		$('.navbar a.dropdown-toggle').on('click', function(e) {
+			var $el = $(this);
+			var $parent = $(this).offsetParent(".dropdown-menu");
+			$(this).parent("li").toggleClass('open');
+
+			if(!$parent.parent().hasClass('nav')) {
+				$el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
+			}
+
+			$('.nav li.open').not($(this).parents("li")).removeClass("open");
+
+			return false;
+		});
+	});
+</script>
 

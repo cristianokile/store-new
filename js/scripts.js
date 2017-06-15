@@ -30,3 +30,5 @@ $.getScript( 'js/owl-carousel/dist/owl.carousel.js', function() {});
 
 // FANCY BOX
 $.getScript( 'js/fancy-js/jquery.fancybox.js', function() {});
+
+

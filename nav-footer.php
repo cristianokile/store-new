@@ -21,13 +21,13 @@
 					<h3>PRODUTOS</h3>
 					<ul>
 						<li>
-							<a href="catalogo-categoria.php">BRINCOS</a>		
+							<a href="categoria.php?categoria=brincos">BRINCOS</a>		
 						</li>
 						<li>
-							<a href="catalogo-categoria.php">COLARES</a>		
+							<a href="categoria.php?categoria=colares">COLARES</a>		
 						</li>
 						<li>
-							<a href="catalogo-categoria.php">PULSEIRAS</a>		
+							<a href="categoria.php?categoria=pulseiras">PULSEIRAS</a>		
 						</li>
 					</ul>
 				</li>

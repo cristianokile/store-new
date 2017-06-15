@@ -14,7 +14,7 @@ $(document).ready(function(){
 				data: form_data
 			}).done(function(data){ //on Ajax success
 				$("#cart-info").html(data.items); //total items in cart-info element
-				button_content.html('ADICIONAR AO ORÇAMENTO'); //reset button text to original text
+				button_content.html('ADICIONAR AO CARRINHO'); //reset button text to original text
 				//alert("Adicionado ao carrinho!"); //alert user
 				if($(".shopping-cart-box").css("display") == "block"){ //if cart box is still visible
 					$(".cart-box").trigger( "click" ); //trigger click to update the cart box.
@@ -28,7 +28,7 @@ $(document).ready(function(){
 		$( ".cart-box").click(function(e) { //when user clicks on cart box
 			e.preventDefault(); 
 			$(".shopping-cart-box").fadeIn(); //display cart box
-			$("#shopping-cart-results").html('<img src="img/ajax-loader.gif">'); //show loading image
+			$("#shopping-cart-results").html('<img src="img/carrinho/ajax-loader.gif">'); //show loading image
 			$("#shopping-cart-results" ).load( "carrinho_add.php", {"load_cart":"1"}); //Make ajax request using jQuery Load() & update results
 		});
 

@@ -65,10 +65,10 @@ if(isset($_POST['cliente_tel'])) {
 	
 </table>
 <?php
-	if(isset($_SESSION["products"]) && count($_SESSION["products"])>0){
+	if(isset($_SESSION["produtos"]) && count($_SESSION["produtos"])>0){
 		$total 			= 0;
 
-		foreach($_SESSION["products"] as $product){ 
+		foreach($_SESSION["produtos"] as $product){ 
 			$product_id 		= $product["id"];
 			$product_name 		= $product["product_name"];
 			$product_code 		= $product["product_code"];
