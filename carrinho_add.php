@@ -40,20 +40,16 @@
 			foreach($_SESSION["products"] as $product){ //loop though items and prepare html content
 				
 				//set variables to use them in HTML content below
-				$produto_id			= $product["id"];
 				$produto_codigo 	= $product["produto_codigo"];
 				$produto_titulo 	= $product["produto_titulo"];
-				$produto_desc 		= $product["produto_descricao"];
 				$produto_imagem 	= $product["produto_imagem"];
-				$produto_imagem_hd	= $product["produto_imagem_hd"];
-				$produto_cat 		= $product["produto_categoria"];
 				$produto_preco 		= $product["produto_preco"];
 				$produto_qtde		= $product["produto_qtde"];
 				
 				$cart_box .=  
 				"<li class='lista-body'>
 					<div class='row'>
-						<div class='col-md-2 lista-foto text-center'>
+						<div class='col-md-4 lista-foto text-center'>
 							<div class='out center-block'>
 								<div class='in'>
 									<a href='produto.php?cod=" . $produto_codigo . "'>
@@ -62,23 +58,17 @@
 								</div>
 							</div>
 						</div>
-						<div class='col-md-6 lista-descricao'>
+						<div class='col-md-5 lista-descricao'>
 							<div class='out'>
 								<div class='in'>
 									<a href='produto.php?cod=" . $produto_codigo . "'>
-										<p><strong>" . $produto_titulo . "</strong></p>
+										<p>" . $produto_titulo . "</p>
+										<p><strong>R$ " . $produto_preco . "</strong></p>
 									</a>
 								</div>
 							</div>
-						</div>
-						<div class='col-md-2 lista-Itens'>
-							<div class='out center-block'>
-								<div class='in text-center'>
-									<p><strong>Qtde:</strong><br>" . $produto_qtde . "</p>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-2 acao'>
+						</div>						
+						<div class='col-md-3 acao'>
 							<div class='out center-block'>
 								<div class='in'>
 									<a class='btn btn-lg remove-item' href='#' data-code='" . $produto_codigo . "'><i class='glyphicon glyphicon-trash' aria-hidden='true'></i></a>
@@ -91,15 +81,12 @@
 				$total = $produto_qtde;
 			}
 			$cart_box .= "</ul>";
-			$cart_box .= '<div class="cart-products-total"><u><a class="btn btn-default" href="carrinho.php" title="Revisar o Carrinho e Realizar a Compra">Comprar!</a></u></div>';
+			$cart_box .= '<div class="cart-products-total center-block text-center"><u><a class="btn btn-default btn-empty" href="carrinho.php" title="Revisar e Realizar a Compra">VER CARRINHO</a></u></div>';
 			die($cart_box); //exit and output content
 		}else{
 			die("
-				<ul class='cart-products-loaded'>
-					<li class='lista-body'>
-						<br><p class='text-center'>Você não possui produtos adicionados</p><br>
-					</li>
-				</ul>"); //we have empty cart
+					<h3 class='carrinho-vazio'>Você não possui produtos adicionados</h3>
+				"); 
 		}
 	}
 

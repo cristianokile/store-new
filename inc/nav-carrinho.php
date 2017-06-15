@@ -14,8 +14,11 @@
 		<?php }?>
 	</a>
 	<div class="shopping-cart-box">
-		<a href="#" class="close-shopping-cart-box">Fechar</a>
-		<h3>Carrinho</h3>
+		<?php if ($contador === 1){ 
+			echo "<h3>" . $contador . " item adicionado ao carrinho</h3>";
+		} elseif ($contador >= 2){
+			echo "<h3>" . $contador . " itens adicionados ao carrinho</h3>";
+		}?>
 		<div id="shopping-cart-results">
 		</div>
 	</div>

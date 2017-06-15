@@ -1,14 +1,14 @@
 <?php
 
-// $db_username        = 'root'; //MySql database username
-// $db_password        = ''; //MySql dataabse password
-// $db_name            = 'juchimello'; //MySql database name
-// $db_host            = 'localhost'; //MySql hostname or IP
-
-$db_username        = 'chiapadesign'; //MySql database username
-$db_password        = 'queroveragora10'; //MySql dataabse password
-$db_name            = 'chiapadesign'; //MySql database name
+$db_username        = 'root'; //MySql database username
+$db_password        = ''; //MySql dataabse password
+$db_name            = 'juchimello'; //MySql database name
 $db_host            = 'localhost'; //MySql hostname or IP
+
+// $db_username        = 'chiapadesign'; //MySql database username
+// $db_password        = 'queroveragora10'; //MySql dataabse password
+// $db_name            = 'chiapadesign'; //MySql database name
+// $db_host            = 'localhost'; //MySql hostname or IP
 
 $currency			= '&#82;&#36;'; //currency symbol
 $shipping_cost		= 1.50; //shipping cost
